@@ -1,0 +1,31 @@
+{% extends 'englishapp/base.html' %}
+
+{% block title %}Registration{% endblock %}
+
+{% block content %}
+<article class="registration">
+  <div class="page-name">
+    <h1>英単語登録フォーム</h1>
+  </div>
+  <p style="margin: 0;padding:0;">※複数の日本語訳を入力する際は、全角スペースで区切ってください。</p>
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <div class="registration-form">
+    <form action="{% url 'wordregistration' %}" method="post">
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="field">
+          {{ field.label_tag }}{{ field }}
+        </div>
+        {{ field.errors }}
+      {% endfor %}
+      <input type="submit" value="registration" style="margin: 5px 0">
+    </form>
+  </div>
+</article>
+{% endblock %}

@@ -1,0 +1,16 @@
+{%extends 'englishapp/base.html'%}
+{% load static%}
+
+{%block contents%}
+{% for answer in answer_list %}
+<div class="card mb-4 mt-4">
+  <h4 class="card-header bg-dark text-white">問題</h4>
+  <div class="card-body">
+      <tr>
+        <th>{{answer.question}}</th>
+        <th>{{answer.answer}}</th>
+      </tr>
+  </div>
+</div>
+{% endfor %}
+{%endblock%}
