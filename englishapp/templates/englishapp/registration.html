@@ -2,7 +2,7 @@
 
 {% block title %}Registration{% endblock %}
 
-{% block content %}
+{% block contents %}
 <article class="registration">
   <div class="page-name">
     <h1>英単語登録フォーム</h1>
@@ -16,7 +16,7 @@
     </ul>
   {% endif %}
   <div class="registration-form">
-    <form action="{% url 'wordregistration' %}" method="post">
+    <form action="{% url 'englishapp:wordregistration' %}" method="post">
       {% csrf_token %}
       {% for field in form %}
         <div class="field">
