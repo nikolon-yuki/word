@@ -3,13 +3,17 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>{%block title%}{%endblock%}</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto about-left">
           <li class="nav-item active">
             <a class="nav-link" href="{%url 'englishapp:index'%}">Home</a>
           </li>
@@ -22,10 +26,21 @@
           <li class="nav-item">
             <a class="nav-link" href="{%url 'user:login'%}">Log In</a>
           </li>
+          <li class="nav-item">
+            <a href="{%url 'user:logout'%}" class="nav-link">Log Out</a>
+          </li>
+          <li class="nav-item">
+            <a href="{%url 'englishapp:form'%}" class="nav-link">Inquiry</a>
+          </li>
         </ul>
+        <form class="search" action="{%url 'englishapp:index'%}" method="get">
+          <span >word search: <input type="text" name="question"></span>
+          <span ><input type="submit" value="done"></span>
+        </form>
     </nav>
-    <header>
-        <h1>英単語</h1>
+    <header class="wrapper">
+        <h1 >English Words</h1>
+        <p>you can create your original wordbook</p>
     </header>
     <div class="container">
         <div class="row">
@@ -33,4 +48,9 @@
         </div>
     </div>
 </body>
+<footer>
+  <div class="copy">
+    <p><small>&copy;2021 mori</small></p>
+  </div>
+</footer>
 </html>

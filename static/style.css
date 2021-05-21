@@ -1,4 +1,97 @@
+html{
+    font-size: 100%;
+}
+
+body{
+    font-family: 'New Tegomin', serif;
+}
+
+nav{
+    padding-left: 30px;
+    /* justify-content: space-between; */
+}
+
+.navbar{
+    justify-content: space-between;
+}
+
+.wrapper{
+    background-image: url(../static/img/frank-mckenna-OD9EOzfSOh0-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+    margin: 0 auto;
+}
+
 header{
+    font-family: 'Open Sans', sans-serif;
     color:black;
     text-align: center;
+    margin: 30px;
+}
+
+.container{
+    margin-top: 6%;
+    margin-bottom: 60px;
+    margin: 100px;
+}
+
+.cards-header{
+    text-align: center;
+    width: 30%;
+    max-width: 980px;
+    color: #fff;
+    margin:auto;
+    background-color:rgb(95, 190, 190);
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cards-body{
+    font-family: 'New Tegomin', serif;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 10px;
+}
+
+.registration{
+    text-align: center;
+}
+
+.registration-form{
+    margin: 30px 0;
+}
+
+.about-left{
+    float: left;
+    width: 70%;
+  }
+
+.search{
+    justify-content: space-between;
+    float: right;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.please{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 32px;
+}
+
+.message-tag{
+    background-color:rgb(95, 190, 190);
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer{
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 18px;
+}
+
+footer p{
+    color: rgb(189, 168, 112);
+    font-size: 24px;
 }

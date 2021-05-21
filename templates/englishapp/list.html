@@ -2,10 +2,16 @@
 {% load static%}
 
 {%block contents%}
+<!-- <form class="search" action="{%url 'englishapp:index'%}" method="get">
+  <p>word:<input type="text" name="question"></p>
+  <p><input type="submit" value="実行する"></p>
+</form> -->
+
+{% if user.is_authenticated %}
 {% for answer in answer_list %}
-<div class="card mb-4 mt-4">
-  <h4 class="card-header bg-dark text-white">問題</h4>
-  <div class="card-body">
+<div class="container mb-4 mt-4">
+  <h4 class="cards-header">question</h4>
+  <div class="cards-body">
       <tr>
         <th>{{answer.question}}</th>
         <th>{{answer.answer}}</th>
@@ -13,4 +19,8 @@
   </div>
 </div>
 {% endfor %}
+{%else%}
+<a href="{%url 'user:login'%}"class="please">Please Log In!</a> 
+{% endif %}
+  
 {%endblock%}

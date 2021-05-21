@@ -13,7 +13,7 @@ class Answer(models.Model):
     question = models.TextField('問題',unique=True)
     answer = models.TextField('答え')
     created_at = models.DateTimeField('投稿日',default=timezone.now)
-    category = models.ForeignKey(Word, verbose_name='カテゴリ', on_delete=models.CASCADE)
+    # category = models.ForeignKey(Word, verbose_name='カテゴリ', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.question
