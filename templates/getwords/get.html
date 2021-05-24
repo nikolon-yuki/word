@@ -1,0 +1,20 @@
+{% extends 'englishapp/base.html' %}
+
+{% block contents %}
+<div class="container">
+<ul class="list-group list-group-flush">
+ <table >
+   <tr>
+     <th>english:</th>
+     <!-- <th>URL</th> -->
+   </tr>
+   {% for post in list %} 
+   <tr>
+     <td>{{ post.spell }}</td>
+     <!-- <td><a href="{{ post2 }}">{{ post2 }}</a></td> -->
+   </tr>
+   {% endfor %}
+ </table>
+</ul>
+</div>
+{% endblock%}

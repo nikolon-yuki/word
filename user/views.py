@@ -14,7 +14,7 @@ def signupview(request):
             return render(request, 'user/signup.html',{'error':'このユーザーは既に登録されています'})
     else:
         return render(request, 'user/signup.html',{})
-    return render(request, 'template_name',{})
+    return render(request, template_name,{})
 
 def loginview(request):
     if request.method == 'POST':

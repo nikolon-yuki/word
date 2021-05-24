@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'englishapp.apps.EnglishappConfig',
     'user.apps.UserConfig',
+    'getwords.apps.GetwordsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

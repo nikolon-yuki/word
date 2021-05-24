@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('englishapp.urls')),
     path('', include('user.urls')),
+    path('', include('getwords.urls')),
 ]
