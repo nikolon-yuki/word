@@ -39,7 +39,6 @@ class FormView(FormView):
 class Detailview(generic.DeleteView):
     model = Answer
 
-
 def wordregistration(request):
     if(request.method == 'POST'):
         regi_question = request.POST['question']
@@ -63,3 +62,4 @@ def wordregistration(request):
     }
 
     return render(request, 'englishapp/registration.html', params)
+ 

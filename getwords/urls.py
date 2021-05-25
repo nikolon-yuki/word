@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import Create, getfunc
+from .views import inputwords, getfunc
 
 app_name='getwords'
 
 urlpatterns = [
-   path('create/', Create.as_view(), name='home'),
-   path('get/', getfunc, name='get'),
+   path('inputwords/', inputwords, name='inputwords'),
+   path('get/', getfunc, name='list'),
 ]

@@ -1,0 +1,29 @@
+{% extends 'englishapp/base.html' %}
+
+{% block contents %}
+
+<div class="page-name">
+    <h1>英単語入力フォーム</h1>
+  </div>
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li {% if message.tags %} class=" message-tag {{ message.tags }}" {% endif %}>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <div class="registration-form ">
+    <form action="{% url 'getwords:inputwords' %}" method="post">
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="field mb-4 mt-4">
+          {{ field.label_tag }}{{ field }}
+        </div>
+        {{ field.errors }}
+      {% endfor %}
+      <input type="submit" value="input" style="margin: 5px 0">
+    </form>
+  </div>
+</article>
+
+{% endblock%}
